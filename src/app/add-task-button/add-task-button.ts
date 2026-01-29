@@ -14,6 +14,9 @@ export class AddTaskButton {
 
   }
   handleAddButton() {
+    if (this.tmpTitle == "") {
+      return;
+    }
     this.todoManager.addTodo(this.tmpTitle);
     this.tmpTitle = "";
   }
