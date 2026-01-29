@@ -14,16 +14,23 @@ export class TodoManager {
 
   fetchTodos() {
     this.todos.push(
-      { id: 1, title: "zrobic pranie", done: true },
-      { id: 2, title: "opcjonalnie zjesc kebaba", done: false })
+      { id: crypto.randomUUID(), title: "zrobic pranie", done: true },
+      { id: crypto.randomUUID(), title: "opcjonalnie zjesc kebaba", done: false })
   }
   getTodos() {
     return this.todos;
   }
 
-  addTodo(addtitle: string) {
-    const tmp: TaskInterface = { id: this.todos.length, title: addtitle, done: false };
+  addTodo(addTitle: string) {
+    const tmp: TaskInterface = { id: crypto.randomUUID(), title: addTitle, done: false };
     this.todos.push(tmp);
+  }
+
+  toggleTodo(toggleId: string) {
+    const todo = this.todos.find((todo) => todo.id === toggleId);
+    if (todo) {
+      todo.done = !todo.done;
+    }
   }
 
 }

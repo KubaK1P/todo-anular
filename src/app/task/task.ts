@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TodoManager } from '../todo-manager';
 
 @Component({
   selector: 'app-task',
@@ -7,10 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './task.css',
 })
 export class Task {
-  constructor() {
-
-  }
-  @Input() id: number = 0;
-  @Input() title: string = 'tytuł taska';
+  constructor(private todoManager: TodoManager) { }
+  @Input() id: string = "noIdForSomeReason";
+  @Input() title: string = 'uNdEfInEd xd';
   @Input() done: boolean = false;
+
+  toggleDone() {
+    this.todoManager.toggleTodo(this.id);
+  }
 }
