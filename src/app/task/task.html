@@ -1,1 +1,3 @@
-<div [id]="id">{{title}} : <input type="checkbox" [checked]="done" (change)="toggleDone()" ></div>
+<div [id]="id" [ngClass]="{'task-done':done}">{{title}} :
+  <input type="checkbox" [checked]="done" (change)="toggleDone()">
+</div>

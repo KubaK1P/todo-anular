@@ -1,0 +1,4 @@
+.task-done {
+  color: firebrick;
+  text-decoration-line: line-through;
+}

@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { TodoManager } from '../todo-manager';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-task',
-  imports: [],
+  imports: [NgClass],
   templateUrl: './task.html',
   styleUrl: './task.css',
 })

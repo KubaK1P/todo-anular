@@ -1,6 +1,7 @@
 <div>
   <h1>Lista tasków: (rodzic)</h1>
-  @for (task of todos; track task.id) {
+  @for (task of todoManager.todos; track task.id) {
   <app-task [id]="task.id" [title]="task.title" [done]="task.done" ></app-task>
   }
+  <app-add-task-button></app-add-task-button>
 </div>

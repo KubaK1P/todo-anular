@@ -5,7 +5,7 @@ import { TaskInterface } from './interfaces/taskinterface';
   providedIn: 'root',
 })
 export class TodoManager {
-  private todos: TaskInterface[] = [
+  public todos: TaskInterface[] = [
   ];
 
   constructor() {
